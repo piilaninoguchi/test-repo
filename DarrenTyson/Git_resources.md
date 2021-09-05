@@ -13,7 +13,7 @@
 [Version Control for Data Science](https://www.youtube.com/watch?v=UbL7VUpv1Bs)  
 
 #### Git Applications
-[Sourcetree)(https://sourcetreeapp.com)  
+[Sourcetree](https://sourcetreeapp.com)  
 [Installing Sourcetree](https://confluence.atlassian.com/get-started-with-sourcetree/get-started-with-sourcetree-847359026.html)  
 [Embedded or system Git when using Sourcetree?](https://confluence.atlassian.com/sourcetreekb/using-embedded-git-or-system-git-in-sourcetree-785323587.html)  
 
