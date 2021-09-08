@@ -1,0 +1,47 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r include=F}
+library(datasets)
+```
+
+
+####Types of Data
+numerical data - think real numbers
+
+categirical data - think integers
+
+binary data - think 0,1
+
+modeling: predictor -> result
+
+Linear model: numerical -> numerical 
+```{r}
+linearmodel <- lm(mpg ~ qsec, mtcars)
+summary(linearmodel)
+```
+
+
+ANOVA model: categorical/binary -> numerical (note: categorical will be higher level ANOVA type model)
+```{r}
+ANOVAmodel <- lm(mpg ~ as.factor(cyl), mtcars)
+summary.lm(ANOVAmodel)
+```
+
+Logit model: numerical -> binary/categorical (note: categorical will be higher level logit type model)
+https://www.datacamp.com/community/tutorials/logistic-regression-R
+```{r}
+logitmodel <- glm(as.factor(vs) ~ mpg, mtcars, family = "binomial")
+summary.lm(logitmodel)
+```
+
+Note: you can use multiple predictors and there are R tools to help you decide which predictors are the most effective -> algorithms which will test ALL combinations!
+
+####Fitting Curves 
+```{r}
+#distributions - d,p,n,q in front of the dist name or abbrev 
+curve(dnorm(x,0,1), xlim = c(-6, 6), ylab = 'Probablity Density, N(0,1)') #normal dist
+curve(dt(x, df = 10), xlim = c(-6, 6), ylab = 'Probablity Density, t with 10 d.o.f.') #t-dist
+```
